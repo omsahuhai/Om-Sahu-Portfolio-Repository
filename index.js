@@ -1,7 +1,7 @@
 /**
  * ====================================================================
  * Om Sahu — Personal Portfolio Scripts
- * Full-Stack Developer & AI Systems Engineer
+ * Full-Stack Developer
  * Raipur, Chhattisgarh, India
  * ====================================================================
  * 
@@ -11,7 +11,7 @@
  * 3. Mobile Navigation Drawer Toggle
  * 4. Smooth Anchor Link Scrolling
  * 5. ScrollSpy (Active Navigation Link Highlighting)
- * 6. Contact Form Interactive Handler
+ * 6. Contact Direct Mailer & Copy Email Handler (No Fake States)
  * ====================================================================
  */
 
@@ -21,22 +21,22 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileNav();
     initSmoothScroll();
     initScrollSpy();
-    initContactForm();
+    initContactActions();
 });
 
 /**
  * 1. Typewriter Effect
- * Cycles through professional roles in the hero section.
+ * Cycles through authentic professional roles in the hero section.
  */
 function initTypewriter() {
     const typedRoleEl = document.getElementById('typedRole');
     if (!typedRoleEl) return;
 
     const roles = [
-        'Full-Stack (MERN) Developer',
-        'Next.js & TypeScript Specialist',
-        'AI & Gemini API Builder',
-        'SaaS Systems Craftsman'
+        'Next.js & React Specialist',
+        'TypeScript & Node.js Builder',
+        'Full-Stack Developer',
+        'Applied AI & Web Developer'
     ];
 
     let roleIndex = 0;
@@ -54,15 +54,15 @@ function initTypewriter() {
             charIndex++;
         }
 
-        let speed = isDeleting ? 30 : 70;
+        let speed = isDeleting ? 30 : 65;
 
         if (!isDeleting && charIndex === currentRole.length) {
-            speed = 2000; // Pause at the end of the role
+            speed = 2200; // Pause at end of role
             isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             roleIndex = (roleIndex + 1) % roles.length;
-            speed = 400; // Pause before typing the next role
+            speed = 400; // Pause before typing next role
         }
 
         setTimeout(typeEffect, speed);
@@ -80,11 +80,11 @@ function initNavbarScroll() {
     if (!navbar) return;
 
     const handleScroll = () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 40);
+        navbar.classList.toggle('scrolled', window.scrollY > 30);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Initial check on load
+    handleScroll();
 }
 
 /**
@@ -102,7 +102,7 @@ function initMobileNav() {
         mobileToggle.setAttribute('aria-expanded', String(isOpen));
     });
 
-    // Close menu when clicking outside or selecting a link
+    // Close menu when clicking any nav link
     navLinks.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('open');
@@ -122,7 +122,7 @@ function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+            if (targetId === '#' || targetId === '') return;
 
             const target = document.querySelector(targetId);
             if (!target) return;
@@ -151,7 +151,7 @@ function initScrollSpy() {
 
     const observerOptions = {
         root: null,
-        rootMargin: '-30% 0px -60% 0px',
+        rootMargin: '-25% 0px -65% 0px',
         threshold: 0
     };
 
@@ -175,42 +175,74 @@ function initScrollSpy() {
 }
 
 /**
- * 6. Contact Form Interactive Handler
- * Provides visual feedback during form submission and simulates transmission.
+ * 6. Contact Actions: Copy Email & Genuine Direct Mailto Launcher
+ * Never simulates fake transmission states.
  */
-function initContactForm() {
+function initContactActions() {
+    // A) 1-Click Copy Email
+    const copyEmailBtn = document.getElementById('copyEmailBtn');
+    const emailToCopy = 'om.colab1@gmail.com';
+
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', async () => {
+            try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(emailToCopy);
+                } else {
+                    // Fallback
+                    const tempInput = document.createElement('input');
+                    tempInput.value = emailToCopy;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(tempInput);
+                }
+
+                const copyTextSpan = copyEmailBtn.querySelector('.copy-text');
+                if (copyTextSpan) {
+                    const originalText = copyTextSpan.textContent;
+                    copyTextSpan.textContent = 'Copied!';
+                    copyEmailBtn.classList.add('copied');
+                    setTimeout(() => {
+                        copyTextSpan.textContent = originalText;
+                        copyEmailBtn.classList.remove('copied');
+                    }, 2500);
+                }
+            } catch (err) {
+                console.error('Failed to copy email:', err);
+            }
+        });
+    }
+
+    // B) Direct Email Composer (Launches real mailto link, zero fake transmission)
     const contactForm = document.getElementById('contactForm');
-    if (!contactForm) return;
+    const statusNote = document.getElementById('formStatusNote');
 
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        if (!submitBtn) return;
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
 
-        const originalText = submitBtn.innerHTML;
-        const originalBg = submitBtn.style.background;
-        const originalBorder = submitBtn.style.borderColor;
+            const name = document.getElementById('fname')?.value.trim() || '';
+            const email = document.getElementById('femail')?.value.trim() || '';
+            const subject = document.getElementById('fsubject')?.value.trim() || 'Project / Opportunity Inquiry';
+            const msg = document.getElementById('fmsg')?.value.trim() || '';
 
-        // Transition to transmitting state
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '⚡ TRANSMITTING PACKET...';
-        submitBtn.style.background = 'var(--accent-hover)';
-        submitBtn.style.borderColor = 'var(--accent-hover)';
+            const bodyContent = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`;
+            const mailtoUrl = `mailto:${emailToCopy}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyContent)}`;
 
-        // Simulated network transmission delay
-        setTimeout(() => {
-            submitBtn.innerHTML = '✓ MESSAGE TRANSMITTED DIRECTLY';
-            submitBtn.style.background = '#00b894';
-            submitBtn.style.borderColor = '#00b894';
+            if (statusNote) {
+                statusNote.textContent = 'Launching your email client to send message...';
+                statusNote.className = 'form-status-note active';
+            }
 
-            // Reset after display period
+            // Launch user's default email client
+            window.location.href = mailtoUrl;
+
             setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-                submitBtn.style.background = originalBg;
-                submitBtn.style.borderColor = originalBorder;
-                contactForm.reset();
-            }, 3500);
-        }, 1100);
-    });
+                if (statusNote) {
+                    statusNote.textContent = 'Email client triggered. You can also write directly to om.colab1@gmail.com.';
+                }
+            }, 2000);
+        });
+    }
 }

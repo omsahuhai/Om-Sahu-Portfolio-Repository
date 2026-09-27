@@ -2,7 +2,7 @@
 
 # Om Sahu — Portfolio Website
 
-**Full-Stack Developer & AI Systems Engineer**  
+**Full-Stack Developer**  
 Raipur, Chhattisgarh, India
 
 [![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-omsahu.ccbp.tech-7f5af0?style=for-the-badge&logo=googlechrome&logoColor=white)](https://omsahu.ccbp.tech)
@@ -13,7 +13,7 @@ Raipur, Chhattisgarh, India
 <br />
 
 <p align="center">
-  A clean, modern, and high-performance personal portfolio built with semantic HTML5, modular CSS3, and vanilla JavaScript. Features a signature Lavender & Slate design system, interactive typewriter animations, a bento-grid skill showcase, real-world SaaS project breakdowns, and accessible UI interactions.
+  A clean, modern, and high-performance personal portfolio built with semantic HTML5, vanilla CSS3, and modern JavaScript. Features a signature Lavender & Slate design system, interactive typewriter animations, product-first project breakdowns, an interactive dashboard UI mockup for Easy Manager, factual milestones, and real direct contact channels.
 </p>
 
 [View Live Site](https://omsahu.ccbp.tech) · [Report Bug](https://github.com/omsahuhai/omsahu.ccbp.tech/issues) · [Request Feature](https://github.com/omsahuhai/omsahu.ccbp.tech/issues)
@@ -27,12 +27,12 @@ Raipur, Chhattisgarh, India
 - [Overview](#-overview)
 - [Key Features](#-key-features)
 - [Design System & Aesthetics](#-design-system--aesthetics)
-- [Featured Projects Highlighted](#-featured-projects-highlighted)
-- [Tech Stack](#-tech-stack)
+- [Featured Projects](#-featured-projects)
+- [Technical Skills](#-technical-skills)
+- [Education & Achievements](#-education--achievements)
 - [Repository Structure](#-repository-structure)
 - [Getting Started Locally](#-getting-started-locally)
 - [Deployment](#-deployment)
-- [Certifications & Honors](#-certifications--honors)
 - [Contact & Connect](#-contact--connect)
 - [License](#-license)
 
@@ -40,25 +40,25 @@ Raipur, Chhattisgarh, India
 
 ## 🌐 Overview
 
-This repository hosts the official personal portfolio website for **Om Sahu** ([omsahu.ccbp.tech](https://omsahu.ccbp.tech)), showcasing expertise in:
+This repository hosts the official personal portfolio website for **Om Sahu** ([omsahu.ccbp.tech](https://omsahu.ccbp.tech)), highlighting:
 
-- **Full-Stack SaaS Architecture:** Production platforms utilizing Next.js App Router, TypeScript, and Supabase PostgreSQL.
-- **Database Security & RLS:** Enterprise-grade PostgreSQL schema designs with Row-Level Security (RLS) and multi-tenant isolation.
-- **Generative AI & LLM Systems:** Applied Google Gemini API pipelines with structured JSON extraction, automated document intelligence, and situation-aware strategy engines.
-- **Client Delivery:** Real-world commercial single-page applications with WhatsApp checkout and vertical retail management.
+- **Full-Stack Web Development:** Production web applications built with Next.js, React, TypeScript, Node.js, Express, and PostgreSQL.
+- **Product-First Engineering:** Focus on real-world utility, user problems solved, operational data validation, and automated financial/operational reporting.
+- **Applied AI Integration:** Integrating Google Gemini API into web applications for structured document extraction, syllabus mapping, and eligibility checks.
+- **Client Delivery:** Commercial single-page applications with mobile-first cart and structured WhatsApp ordering.
 
 ---
 
 ## ✨ Key Features
 
-- **⚡ Fast & Lightweight:** Zero heavy frontend framework overhead. Built with clean, native web standards for sub-second load times.
-- **🎨 Lavender Modern Design System:** Custom-tailored light-mode palette (`#7f5af0` vibrant lavender, `#f8f7fc` soft lavender tint, and `#1a1523` deep slate purple text) with glassmorphism backdrop filters.
-- **⌨️ Typewriter Hero Animation:** Dynamic role cyclist highlighting core competencies (Full-Stack Developer, Next.js & TypeScript Specialist, AI & Gemini API Builder, SaaS Craftsman).
-- **🍱 Bento Grid Architecture:** Modular responsive layout categorizing Frontend, Backend Server Actions, Database Security (RLS), GenAI/LLM pipelines, Cloud persistence, and Developer Tooling.
-- **📱 Dashboard UI Simulation:** Live interactive fuel station SaaS card for *Easy Manager* displaying real-time meter tracking metrics and operational validation states.
-- **📜 Smart ScrollSpy & Glass Navbar:** Sticky navigation with dynamic background blur on scroll, mobile hamburger drawer, and section-tracking active indicators.
-- **📬 Interactive Transmission Form:** Contact submission with simulated packet delivery states and direct channel access (Email, Phone, GitHub, LinkedIn).
-- **♿ SEO & A11y Optimized:** Semantic HTML5 (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`), descriptive ARIA tags, Open Graph meta previews, and accessible keyboard navigation.
+- **⚡ Fast & Lightweight:** Zero heavy frontend framework overhead. 3-file architecture (`index.html`, `index.css`, `index.js`) for sub-second load times.
+- **🎨 Lavender Modern Design System:** Curated light palette (`#7f5af0` vibrant lavender, `#f8f7fc` soft lavender tint, and `#1a1523` deep slate text) with glassmorphism navbar.
+- **⌨️ Typewriter Hero Animation:** Dynamic role transitions highlighting core competencies (Full-Stack Developer, Next.js & React Specialist, TypeScript & Node.js Builder, Applied AI & Web Developer).
+- **📱 Easy Manager Dashboard UI Simulation:** Live fuel station management card displaying meter tracking metrics, active rates, and operational validation status with illustrative data.
+- **🍱 Categorized Technical Skills:** Five clean skill groups covering Languages, Frontend, Backend, Databases, and AI/GenAI without disproportionate tool flexing.
+- **🏆 Factual Achievements & Credentials:** Dedicated milestone section highlighting National Hackathon qualification and competitive coding wins, alongside a compact certificate showcase.
+- **📬 Real Direct Contact:** One-click email copy button, direct mail composer, WhatsApp chat link, and profile links without simulated fake states.
+- **♿ SEO & A11y Optimized:** Semantic HTML5 structure, descriptive ARIA tags, Open Graph meta previews, and keyboard navigation.
 
 ---
 
@@ -74,7 +74,7 @@ The portfolio uses an intentional, curated design system configured via CSS cust
 | `--accent-border`| `rgba(127, 90, 240, 0.15)` | Subtle accent border highlights |
 | `--bg` | `#ffffff` | Clean primary canvas background |
 | `--bg-alt` | `#f8f7fc` | Alternating section background |
-| `--text` | `#1a1523` | High-contrast slate purple typography |
+| `--text` | `#1a1523` | High-contrast slate typography |
 | `--muted` | `#5e586c` | Secondary descriptive text |
 | `--border` | `#e6e3f3` | Component framing and divider lines |
 | `--radius` | `12px` | Harmonious border radius for cards & containers |
@@ -86,52 +86,63 @@ The portfolio uses an intentional, curated design system configured via CSS cust
 
 ---
 
-## 🚀 Featured Projects Highlighted
+## 🚀 Featured Projects
 
-### 1. Easy Manager — Petrol Pump SaaS
-> **Stack:** Next.js 14 · TypeScript · Supabase PostgreSQL · Server Actions · Zod · Tailwind CSS · RLS  
-> **Links:** [Live App](https://ez-manager.vercel.app) · [GitHub](https://github.com/omsahuhai/easy-manager)
+### 1. Easy Manager — Petrol Pump Management SaaS
+> **Stack:** Next.js · TypeScript · Supabase PostgreSQL · Server Actions · Zod · Tailwind CSS  
+> **Links:** [Live Demo](https://ez-manager.vercel.app) · [GitHub](https://github.com/omsahuhai/easy-manager)
 
 - Multi-business vertical SaaS developed for Indian retail petrol-pump operators.
-- Implements strict PostgreSQL Row-Level Security (RLS) with `business_id` tenant isolation.
-- Type-safe Next.js Server Actions with Zod runtime validation preventing meter continuity breaks.
-- Automated daily fuel sales, expense tracking, dealer margins, and monthly profitability views.
+- Implements tenant data isolation using Supabase Auth with Row-Level Security (RLS) scoped by `business_id`.
+- Type-safe Next.js Server Actions with strict Zod schema validation for core business workflows.
+- Centralized PostgreSQL reporting views for automated daily fuel sales, expenses, dealer margins, and monthly profitability summaries.
+- Meter continuity validation to prevent odometer logging errors and gap discrepancies.
 
-### 2. Raw & Real — Ordering SPA
-> **Stack:** JavaScript (ES6+) · Vite · Tailwind CSS · WhatsApp Web API  
-> **Links:** [Live App](https://raw-and-real.vercel.app/) · [GitHub](https://github.com/omsahuhai/Raw-and-Real)
-
-- Production mobile-first ordering single page application for a Raipur health & juice bar.
-- Interactive catalog of 40+ products with live search, nutritional highlights, and category filtering.
-- Client-side cart state management with structured WhatsApp automated ordering payload.
-
-### 3. College Papers — AI Exam Prep
-> **Stack:** Next.js 14 · React · Google Gemini API · Supabase · pdf-parse · Vercel  
-> **Links:** [Live App](https://collegepapers.vercel.app/) · [GitHub](https://github.com/omsahuhai/collegepapers)
+### 2. College Papers — AI Exam Prep Platform
+> **Stack:** Next.js 14 · React · Google Gemini API · Supabase · Tailwind CSS  
+> **Links:** [Live Demo](https://collegepapers.vercel.app/) · [GitHub](https://github.com/omsahuhai/collegepapers)
 
 - Developed for the **Idea2Impact National Hackathon 2026**.
-- Integrates Google Gemini API into document-analysis endpoints to extract syllabus mapping and recurring questions from historical exam PDFs.
-- Features a situation-aware study strategy planner tailored to remaining preparation time.
+- Integrates Google Gemini API into document-analysis endpoints to extract syllabus mapping, recurring question themes, and topic weightage from previous-year exam PDFs.
+- Features a situation-aware study strategy engine tailoring revision plans based on available prep time.
+- Serverless document parsing pipelines for rapid multi-page question paper ingestion.
 
-### 4. TenderIQ — GovTech Intelligence
-> **Stack:** React 19 · Vite · Node.js / Express · PostgreSQL · Supabase · Google Gemini · JWT  
-> **Links:** [Live App](https://tender-iq-i2i.vercel.app) · [GitHub](https://github.com/aniilhr/TenderIQ)
+### 3. Raw & Real — Food & Juice Ordering SPA
+> **Stack:** JavaScript (ES6+) · Vite · Tailwind CSS · WhatsApp Web API  
+> **Links:** [Live Demo](https://raw-and-real.vercel.app/) · [GitHub](https://github.com/omsahuhai/Raw-and-Real)
 
-- AI-powered tender analysis engine assisting MSMEs in evaluating public government tender documents.
-- Employs an *AI-extracts / rules-decide* hybrid architecture pairing Gemini extraction with deterministic eligibility criteria and risk scoring.
+- Production mobile-first ordering single page application built for a local Raipur juice bar.
+- Interactive catalog of 40+ products with live search, nutritional highlights, and category filtering.
+- Client-side cart state management with structured WhatsApp automated ordering payload for frictionless checkout.
+
+### 4. TenderIQ — GovTech AI Intelligence Platform
+> **Stack:** React · Node.js · Express · PostgreSQL · Google Gemini API · JWT  
+> **Links:** [Live Demo](https://tender-iq-i2i.vercel.app) · [GitHub](https://github.com/aniilhr/TenderIQ)
+
+- Team hackathon project analyzing government tender PDFs and business profiles to produce explainable eligibility and risk reports for MSMEs.
+- Employs an "AI-extracts, rules-decide" pipeline pairing Gemini LLM extraction with deterministic compliance criteria and source citations.
+- Engineered secure REST APIs with Node.js, Express, PostgreSQL, and JWT authentication.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technical Skills
 
 ```
-Frontend:            HTML5, CSS3 (Custom Variables, Flexbox, Grid), JavaScript (ES6+)
-Frameworks & Libs:   Next.js (App Router), React.js, Vite, Tailwind CSS
-Backend:             Node.js, Express.js, Next.js Server Actions, REST APIs
-Databases:           PostgreSQL, Supabase (RLS Policies), MySQL
-AI & GenAI:          Google Gemini API, Structured JSON Extraction, Prompt Engineering
-Tools:               Git, GitHub, Vercel, VS Code, Zod, pdf-parse
+Languages:   JavaScript (ES6+), TypeScript, SQL, Python, HTML5, CSS3
+Frontend:    React.js, Next.js (App Router), Tailwind CSS, Responsive Design, State Management
+Backend:     Node.js, Express.js, Next.js Server Actions, REST APIs, JWT Auth
+Databases:   PostgreSQL, Supabase, MySQL, Relational Schema Design
+AI / GenAI:  Google Gemini API, Structured JSON Extraction, Prompt Engineering, Document Analysis
 ```
+
+---
+
+## 🎓 Education & Achievements
+
+- **Idea2Impact 2026 Hackathon** — Shortlisted for the National Hackathon at Hyderabad (National Finalist).
+- **NxtCode — 7 Under 7 Code Challenge** — Winner in competitive algorithmic problem solving.
+- **Pt. Ravishankar Shukla University** — Bachelor of Computer Applications (BCA) (2025–2028).
+- **NxtWave Academy** — Full Stack (MERN) Development Track · CCBP 4.0 (2024–2028).
 
 ---
 
@@ -140,8 +151,8 @@ Tools:               Git, GitHub, Vercel, VS Code, Zod, pdf-parse
 ```
 omsahu.ccbp.tech/
 ├── index.html        # Semantic HTML5 structure, SEO meta tags, and accessible layout
-├── index.css         # Complete design system: CSS tokens, responsive bento grid, card styles
-├── index.js          # Pure JS modules: typewriter, sticky glass navbar, scrollspy, contact form
+├── index.css         # Complete design system: CSS tokens, cards, projects, responsive rules
+├── index.js          # Pure JS modules: typewriter, sticky glass navbar, scrollspy, contact copy
 ├── favicon.svg       # Brand vector icon (Lavender square with OS monogram)
 └── README.md         # Repository documentation, architecture overview, and setup guide
 ```
@@ -150,10 +161,7 @@ omsahu.ccbp.tech/
 
 ## 💻 Getting Started Locally
 
-No complex dependencies, build steps, or package installations are required to run this portfolio.
-
-### Prerequisites
-A modern web browser (Chrome, Firefox, Safari, Edge).
+No complex dependencies or build steps are required.
 
 ### 1. Clone the repository
 ```bash
@@ -163,56 +171,25 @@ cd omsahu.ccbp.tech
 
 ### 2. Run locally
 
-You can open the project directly in your browser or run a lightweight local HTTP server:
+Open `index.html` directly in your browser or run a lightweight local HTTP server:
 
-#### Option A: Python HTTP Server (Recommended)
 ```bash
+# Option A: Python HTTP Server (Recommended)
 python3 -m http.server 3000
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-#### Option B: Node.js `serve`
-```bash
+# Option B: Node.js serve
 npx serve .
 ```
 
-#### Option C: VS Code Live Server
-Right-click on `index.html` inside VS Code and choose **"Open with Live Server"**.
-
----
-
-## 🚀 Deployment
-
-This static portfolio can be deployed in seconds to any static web hosting provider:
-
-- **CCBP 4.0 Platform:** Deployed directly as the primary profile endpoint at `omsahu.ccbp.tech`.
-- **GitHub Pages:** Go to *Repository Settings → Pages → Deploy from branch `main` / `root`*.
-- **Vercel:**
-  ```bash
-  npm i -g vercel
-  vercel --prod
-  ```
-- **Netlify:** Drag and drop the folder into Netlify Drop or link the Git repository.
-
----
-
-## 🏆 Certifications & Honors
-
-- **National Finalist** — Qualified for Idea 2 Impact Hackathon 2026 (National round at Hyderabad).
-- **Winner** — NxtCode 7 Under 7 Competitive Programming Challenge.
-- **CCBP 4.0 Track** — Full Stack Development (MERN) Scholar at NxtWave Academy (2024–2028).
-- **Academic Degree** — Bachelor of Computer Applications (BCA) at SAGEMMC, Pt. Ravishankar Shukla University (2025–2028).
-- **Verified Competencies** — Google Gemini & GenAI Systems, PostgreSQL Database Architecture & Row-Level Security.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
 ## 📬 Contact & Connect
 
-Feel free to connect for full-stack engineering roles, SaaS client engagements, or open-source collaborations:
-
 - **Website:** [omsahu.ccbp.tech](https://omsahu.ccbp.tech)
 - **Email:** [om.colab1@gmail.com](mailto:om.colab1@gmail.com)
-- **Phone:** [+91 91316 31215](tel:+919131631215)
+- **Phone / WhatsApp:** [+91 91316 31215](tel:+919131631215)
 - **GitHub:** [@omsahuhai](https://github.com/omsahuhai)
 - **LinkedIn:** [linkedin.com/in/omsahuhai](https://www.linkedin.com/in/omsahuhai)
 - **Location:** Raipur, Chhattisgarh, India
@@ -221,4 +198,4 @@ Feel free to connect for full-stack engineering roles, SaaS client engagements, 
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE) — feel free to use it as inspiration for your own portfolio.
+This project is licensed under the [MIT License](LICENSE).
