@@ -35,7 +35,7 @@ function initTypewriter() {
     const roles = [
         'Next.js & React Specialist',
         'TypeScript & Node.js Builder',
-        'Full-Stack Developer',
+        'Full-Stack (MERN) Developer',
         'Applied AI & Web Developer'
     ];
 
@@ -94,21 +94,49 @@ function initNavbarScroll() {
 function initMobileNav() {
     const mobileToggle = document.getElementById('mobileToggle');
     const navLinks = document.getElementById('navLinks');
+    const navBackdrop = document.getElementById('navBackdrop');
     if (!mobileToggle || !navLinks) return;
 
+    const closeMenu = () => {
+        navLinks.classList.remove('open');
+        mobileToggle.textContent = '☰';
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.setAttribute('aria-label', 'Open Navigation');
+        if (navBackdrop) navBackdrop.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    const openMenu = () => {
+        navLinks.classList.add('open');
+        mobileToggle.textContent = '✕';
+        mobileToggle.setAttribute('aria-expanded', 'true');
+        mobileToggle.setAttribute('aria-label', 'Close Navigation');
+        if (navBackdrop) navBackdrop.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
     mobileToggle.addEventListener('click', () => {
-        const isOpen = navLinks.classList.toggle('open');
-        mobileToggle.textContent = isOpen ? '✕' : '☰';
-        mobileToggle.setAttribute('aria-expanded', String(isOpen));
+        if (navLinks.classList.contains('open')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
     });
+
+    if (navBackdrop) {
+        navBackdrop.addEventListener('click', closeMenu);
+    }
 
     // Close menu when clicking any nav link
     navLinks.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('open');
-            mobileToggle.textContent = '☰';
-            mobileToggle.setAttribute('aria-expanded', 'false');
-        });
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+            closeMenu();
+        }
     });
 }
 
