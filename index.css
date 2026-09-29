@@ -304,16 +304,25 @@ nav.scrolled {
 
 /* ───── 07. HERO SECTION ───── */
 .hero {
-    min-height: 84vh;
+    position: relative;
+    min-height: 88vh;
     display: flex;
     align-items: center;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 105px;
+    padding-bottom: 70px;
     background: radial-gradient(circle at 80% 30%, rgba(127, 90, 240, 0.05) 0%, transparent 45%);
 }
 
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.08fr 1fr;
+    gap: 36px;
+    align-items: center;
+    width: 100%;
+}
+
 .hero-content {
-    max-width: 760px;
+    max-width: 580px;
 }
 
 .hero-greeting {
@@ -365,7 +374,7 @@ nav.scrolled {
 .hero-desc {
     font-size: 1.08rem;
     color: var(--muted);
-    max-width: 600px;
+    max-width: 540px;
     line-height: 1.65;
     margin-bottom: 30px;
 }
@@ -377,9 +386,37 @@ nav.scrolled {
     align-items: center;
 }
 
+.hero-portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.hero-portrait picture {
+    display: block;
+    width: 100%;
+    max-width: 530px;
+}
+
+.hero-portrait-img {
+    width: 100%;
+    max-width: 530px;
+    height: auto;
+    aspect-ratio: 819 / 1024;
+    display: block;
+    object-fit: contain;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+    -webkit-mask-image: radial-gradient(ellipse 95% 93% at 50% 48%, black 65%, transparent 100%);
+    mask-image: radial-gradient(ellipse 95% 93% at 50% 48%, black 65%, transparent 100%);
+}
+
 .hero-scroll {
     position: absolute;
-    bottom: 20px;
+    bottom: 18px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -391,6 +428,7 @@ nav.scrolled {
     color: var(--muted);
     letter-spacing: 0.15em;
     text-transform: uppercase;
+    z-index: 2;
 }
 
 .scroll-line {
@@ -1679,6 +1717,15 @@ footer {
 
 /* ───── 16. RESPONSIVE MEDIA QUERIES ───── */
 @media (max-width: 991px) {
+    .hero-grid {
+        gap: 24px;
+    }
+
+    .hero-portrait picture,
+    .hero-portrait-img {
+        max-width: 420px;
+    }
+
     .featured-project {
         grid-template-columns: 1fr;
     }
@@ -1760,6 +1807,28 @@ footer {
         padding-top: 85px;
         min-height: auto;
         padding-bottom: 45px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .hero-portrait {
+        max-width: 320px;
+        margin-inline: auto;
     }
 
     .hero h1 {
