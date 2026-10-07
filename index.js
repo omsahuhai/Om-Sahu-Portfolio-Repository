@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initScrollSpy();
     initContactActions();
+    initCertLightbox();
 });
 
 /**
@@ -273,4 +274,67 @@ function initContactActions() {
             }, 2000);
         });
     }
+}
+
+/**
+ * 7. Certificate Lightbox Modal
+ * Opens full-size certificate on thumbnail click with keyboard & backdrop dismissal.
+ */
+function initCertLightbox() {
+    const certModal = document.getElementById('certModal');
+    const certModalBackdrop = document.getElementById('certModalBackdrop');
+    const certModalClose = document.getElementById('certModalClose');
+    const certModalImg = document.getElementById('certModalImg');
+    const certModalCaption = document.getElementById('certModalCaption');
+
+    if (!certModal || !certModalImg) return;
+
+    const openModal = (imgSrc, title) => {
+        certModalImg.src = imgSrc;
+        certModalImg.alt = title;
+        if (certModalCaption) certModalCaption.textContent = title;
+        certModal.classList.add('active');
+        certModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        certModal.classList.remove('active');
+        certModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+            if (!certModal.classList.contains('active')) {
+                certModalImg.src = '';
+            }
+        }, 200);
+    };
+
+    document.querySelectorAll('.cert-thumb').forEach((thumb) => {
+        thumb.addEventListener('click', () => {
+            const img = thumb.querySelector('.cert-img');
+            const card = thumb.closest('.cert-card');
+            const titleEl = card ? card.querySelector('.cert-title') : null;
+            const title = titleEl ? titleEl.textContent.trim() : (img ? img.alt : 'Certificate Preview');
+            if (img && img.src) {
+                openModal(img.src, title);
+            }
+        });
+
+        // Accessible keyboard activation
+        thumb.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                thumb.click();
+            }
+        });
+    });
+
+    if (certModalClose) certModalClose.addEventListener('click', closeModal);
+    if (certModalBackdrop) certModalBackdrop.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && certModal.classList.contains('active')) {
+            closeModal();
+        }
+    });
 }

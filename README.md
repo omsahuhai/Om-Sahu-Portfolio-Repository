@@ -30,6 +30,7 @@ Raipur, Chhattisgarh, India
 - [Featured Projects](#-featured-projects)
 - [Technical Skills](#-technical-skills)
 - [Education & Achievements](#-education--achievements)
+- [Certifications & Training](#-certifications--training)
 - [Repository Structure](#-repository-structure)
 - [Getting Started Locally](#-getting-started-locally)
 - [Deployment](#-deployment)
@@ -143,6 +144,48 @@ AI / GenAI:  Google Gemini API, Structured JSON Extraction, Prompt Engineering, 
 - **NxtCode — 7 Under 7 Code Challenge** — Winner in competitive algorithmic problem solving.
 - **Pt. Ravishankar Shukla University** — Bachelor of Computer Applications (BCA) (2025–2028).
 - **NxtWave Academy** — Full Stack (MERN) Development Track · CCBP 4.0 (2024–2028).
+
+---
+
+## 📜 Certifications & Training
+
+- **Idea to Impact Hackathon 2026 — NxtWave** | Aug 2026  
+  Participated in the Idea to Impact Offline Hackathon after qualifying for Round 2.  
+  *Skills: React.js, Node.js*
+
+- **Build and Launch Your MVP Workshop — NxtWave** | May 2026  
+  Completed an MVP project using Lovable.dev, Supabase and Leonardo AI.  
+  *Skills: Prompting, MVP Development*
+
+- **Introduction to Databases — NxtWave** | May 2026  
+  Completed the Databases Course Exam.  
+  *Skill: SQL*
+
+- **Build Your Own Dynamic Website — NxtWave** | Feb 2026  
+  Completed the Dynamic Web Application Course Exam.  
+  *Skill: JavaScript*
+
+- **Build Your Own Responsive Website — NxtWave** | Feb 2026  
+  Completed the Responsive Website Course Exam.  
+  *Skills: Bootstrap, CSS Flexbox*
+
+- **Build Your Own Static Website — NxtWave** | Feb 2026  
+  Completed the Static Website Course Exam.  
+  *Skills: HTML, CSS*
+
+- **Generative AI Mega Workshop 2.0 — NxtWave** | Sep 2024  
+  Built a pitch-ready product using 10+ AI tools.  
+  *Skill: Generative AI*
+
+- **MCP Mega Workshop — NxtWave** | Aug 2025  
+  Explored Model Context Protocol and built prompt-driven AI workflows using real-world tools.  
+  *Skills: MCP, Prompting*
+
+- **Intro to Operating Systems — NxtWave** | May 2026  
+  Completed the Foundation Course on Operating Systems.
+
+- **XPM 4.0 Fundamentals — NxtWave** | Jan 2025  
+  Completed foundational training in priority management and integrity.
 
 ---
 
